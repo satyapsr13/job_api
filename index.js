@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 const errorMiddleware = require("./Middlewares/error_handler");
 const notFoundMiddleware = require("./Middlewares/not_found");
 const productRouter = require("./Routes/product");
-const jobRouter = require("./Routes/job");
+const jobRouter = require("./Routes/jobs");
 const authRouter = require("./Routes/auth");
 // const authRouter = require("./routes/authRouter");
 app.use(express.json());
@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
   res.send("STORE API");
 });
 
-app.use("/api/v1/job/", job);
+app.use("/api/v1/job/", jobRouter);
 
 app.use("/api/v1/products/", productRouter);
 app.use("/api/v1/auth/", authRouter);

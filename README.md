@@ -10,4 +10,11 @@
 
 #### Register routes
 
-
+```
+GET /api/v1/jobs
+POST /api/v1/jobs
+GET /api/v1/jobs/:id
+PUT /api/v1/jobs/:id
+DELETE /api/v1/jobs/:id
+```
+ 
